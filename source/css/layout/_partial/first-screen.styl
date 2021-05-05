@@ -38,8 +38,29 @@ $first-screen-img = $temp-img ? $temp-img:'/images/bg.svg';
       +keep-tablet() {
         font-size: $first-screen-font-size * 0.9;
       }
+
+      .store-list {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        img {
+          max-width: 200px;
+          min-width: 100px;
+          width: 100%;
+        }
+      }
     }
 
+    .product {
+      padding-left: 45px;
+      max-width: 300px;
+      width: 50%;
+
+      @media screen and (max-width: 540px){
+        display: none;
+      }
+    }
 
     .s-icon-list {
       position: absolute;

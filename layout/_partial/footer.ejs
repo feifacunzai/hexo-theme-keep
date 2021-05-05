@@ -7,6 +7,13 @@
             <% } %>
             <%= date(new Date(), 'YYYY') %>&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/"><%= theme.base_info.author || config.author %></a>
         </div>
+
+        <% if (theme.product.enable && theme.product.privacy_link) { %>
+        <div class="copyright-info info-item">
+            <a href="<%- theme.product.privacy_link %>">Terms & Conditions</a>
+        </div>
+        <% } %>
+
         <% if (theme.website_count.busuanzi_count.enable === true) { %>
             <script async <%= theme.pjax.enable === true ? 'data-pjax' : '' %> src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <div class="website-count info-item">
