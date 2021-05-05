@@ -11,16 +11,16 @@
       <% if (theme.product.enable) { %>
       <div class="store-list">
         <% if (theme.product.store_img) { %>
-        <a href="<%- theme.product.store_link %>"
-          ><%- image_tag(theme.product.store_img) %>
-       </a>
+        <a href="<%- theme.product.store_link %>">
+          <img src="<%- url_for(theme.product.store_img)%>"/>
+        </a>
         <% } %>
       </div>
       <% } %>
     </div>
 
     <% if(theme.product.enable && theme.product.desc_img) { %>
-      <%- image_tag(theme.product.desc_img, {class: "product"}) %>
+      <img class="product" src="<%- url_for(theme.product.desc_img, {class: "product"})%>"/>
     <% } %> 
     
     <% if (theme.social_contact.enable) { %>

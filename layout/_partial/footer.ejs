@@ -10,7 +10,7 @@
 
         <% if (theme.product.enable && theme.product.privacy_link) { %>
         <div class="copyright-info info-item">
-            <%- link_to(theme.product.privacy_link, 'Terms & Conditions') %>
+            <a href="<%- url_for(theme.product.privacy_link) %>">Terms & Conditions</a>
         </div>
         <% } %>
 
