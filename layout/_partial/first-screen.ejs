@@ -12,15 +12,15 @@
       <div class="store-list">
         <% if (theme.product.store_img) { %>
         <a href="<%- theme.product.store_link %>"
-          ><img src="<%- theme.product.store_img %>"
-        /></a>
+          ><%- image_tag(theme.product.store_img) %>
+       </a>
         <% } %>
       </div>
       <% } %>
     </div>
 
     <% if(theme.product.enable && theme.product.desc_img) { %>
-    <img class="product" src="<%- theme.product.desc_img %>" />
+      <%- image_tag(theme.product.desc_img, {class: "product"}) %>
     <% } %> 
     
     <% if (theme.social_contact.enable) { %>
